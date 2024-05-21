@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace clever_charging_key_api.Providers
 {
+    /// <summary>
+    /// This provider is used to handle updating data in the database for chargingkeys
+    /// </summary>
     public class ChargingKeyContextProvider
     {
         private readonly ChargingKeyContext _context;

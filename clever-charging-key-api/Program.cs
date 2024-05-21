@@ -9,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+//Currently an in memory database, to make it easier to test.
+//When connecting to a Azure databse,
+//UseInMemoryDatabase should be switched with UseConnectionString, that should be defined in appsettings.json
 builder.Services.AddDbContext<ChargingKeyContext>(opt => opt.UseInMemoryDatabase("ChargingKeyList"));
 
 builder.Services.AddScoped<ChargingKeyContextProvider>();

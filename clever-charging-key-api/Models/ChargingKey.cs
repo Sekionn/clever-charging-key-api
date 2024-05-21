@@ -14,6 +14,7 @@ namespace clever_charging_key_api.Models
 
     }
 
+    //This is to better handle the tags in the project.
     public enum KeyTag {
         CleverOne,
         CleverBox,

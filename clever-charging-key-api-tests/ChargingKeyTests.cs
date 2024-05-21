@@ -27,7 +27,7 @@ namespace clever_charging_key_api_tests
             var result = actionResult.Result as OkObjectResult;
             Assert.IsNotNull(result);
             Assert.IsTrue(result.StatusCode == 200);
-            var resultData = result.Value as ChargingkeyCreatedDTO;
+            var resultData = result.Value as ChargingKeyCreatedDTO;
             Assert.IsNotNull(resultData);
             Assert.IsTrue((resultData.Id ?? "").Contains("dk-{"));
             Assert.IsTrue((resultData.Id ?? "").Contains("}-clever"));
@@ -72,7 +72,7 @@ namespace clever_charging_key_api_tests
             var result = actionResult.Result as OkObjectResult;
             Assert.IsNotNull(result);
             Assert.IsTrue(result.StatusCode == 200);
-            var resultData = result.Value as ChargingkeyVerifyDTO;
+            var resultData = result.Value as ChargingKeyVerifyDTO;
             Assert.IsNotNull(resultData);
             Assert.IsTrue(resultData.Exists);
             Assert.IsFalse(resultData.Blocked);
@@ -101,7 +101,7 @@ namespace clever_charging_key_api_tests
             var result = actionResult.Result as OkObjectResult;
             Assert.IsNotNull(result);
             Assert.IsTrue(result.StatusCode == 200);
-            var resultData = result.Value as ChargingkeyVerifyDTO;
+            var resultData = result.Value as ChargingKeyVerifyDTO;
             Assert.IsNotNull(resultData);
             Assert.IsTrue(resultData.Exists);
             Assert.IsTrue(resultData.Blocked);
@@ -162,7 +162,7 @@ namespace clever_charging_key_api_tests
             var result = actionResult.Result as OkObjectResult;
             Assert.IsNotNull(result);
             Assert.IsTrue(result.StatusCode == 200);
-            var resultData = result.Value as ChargingkeyBlockDTO;
+            var resultData = result.Value as ChargingKeyBlockDTO;
             Assert.IsNotNull(resultData);
             Assert.IsTrue(resultData.Id == id);
             Assert.IsTrue(resultData.Blocked);
@@ -191,7 +191,7 @@ namespace clever_charging_key_api_tests
             var result = actionResult.Result as OkObjectResult;
             Assert.IsNotNull(result);
             Assert.IsTrue(result.StatusCode == 200);
-            var resultData = result.Value as ChargingkeyBlockDTO;
+            var resultData = result.Value as ChargingKeyBlockDTO;
             Assert.IsNotNull(resultData);
             Assert.IsTrue(resultData.Id == id);
             Assert.IsTrue(resultData.Blocked);

@@ -1,6 +1,0 @@
-@clever_charging_key_api_HostAddress = http://localhost:5042
-
-GET {{clever_charging_key_api_HostAddress}}/api/ChargingKey/Verify
-Accept: application/json
-
-###
